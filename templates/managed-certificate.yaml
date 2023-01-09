@@ -1,0 +1,8 @@
+# TODO: somehow only enable this if GKE is in use
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: managed-cert
+spec:
+  domains:
+    - {{ .Values.mastodon.local_domain }}
